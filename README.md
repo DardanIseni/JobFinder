@@ -1,9 +1,8 @@
 #JobFinder Api Java
-A Sport news RESTAPI with spring boot, JAVA framework.
-This is a microservice for creating, reading, updating and deleting news, also manipulating with admins that are responsible for mentioned functions.
-Project is consisted about five  entities: address,bid,user,wrok and worker and they have a relationship between them; the user or the creator can manipulate with the works.
+A JobFinder RESTAPI with spring boot, JAVA framework.
+1.This is a microservice for creating, reading, updating and deleting news, also manipulating with admins that are responsible for mentioned functions.
+2.Project is consisted about five  entities: address,bid,user,wrok and worker and they have a relationship between them; the user or the creator can manipulate with the works.
 1. Clone the project using this command:
-
 git clone https://github.com/DardanIseni/JobFinder.git
 2. Create a database for the microservice
 3. Import the sql file at your database.
