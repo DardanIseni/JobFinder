@@ -1,7 +1,7 @@
 #JobFinder Api Java
 A JobFinder RESTAPI with spring boot, JAVA framework.
 
-1.This is a microservice for creating, reading, updating and deleting news, also manipulating with admins that are responsible for mentioned functions.
+1.This is a microservice for creating, biding,finding, updating and deleting , also manipulating with users nad creators that are responsible for mentioned functions.
 
 2.Project is consisted about five  entities: address,bid,user,wrok and worker and they have a relationship between them; the user or the creator can manipulate with the works.
 
@@ -13,8 +13,11 @@ git clone https://github.com/DardanIseni/JobFinder.git
 4. Configure the application.properties file with your mysql credentials:
 
 spring.jpa.hibernate.ddl-auto=update
+
 spring.datasource.url=jdbc:mysql://localhost:3306/JobFinderJava
+
 spring.datasource.username=root
+
 spring.datasource.driver-class-name =com.mysql.jdbc.Driver
 
 You are all set and can run the JobFinder file and can use the application and see the result on http://localhost:8080/
@@ -28,6 +31,7 @@ User endpoints:
 3. URL: http://127.0.01:8080/users Get all users - METHOD = GET
 4. URL: http://127.0.01:8080/user/{id} Update a user - METHOD = PUT
 5. URL: http://127.0.01:8080/user/{id} Delete a user - METHOD = DELETE
+
 Response - List of User objects
 
 Worker endpoints:
