@@ -1,0 +1,65 @@
+#JobFinder Api Java
+A Sport news RESTAPI with spring boot, JAVA framework.
+This is a microservice for creating, reading, updating and deleting news, also manipulating with admins that are responsible for mentioned functions.
+Project is consisted about five  entities: address,bid,user,wrok and worker and they have a relationship between them; the user or the creator can manipulate with the works.
+1. Clone the project using this command:
+
+git clone https://github.com/DardanIseni/JobFinder.git
+2. Create a database for the microservice
+3. Import the sql file at your database.
+4. Configure the application.properties file with your mysql credentials:
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:mysql://localhost:3306/JobFinderJava
+spring.datasource.username=root
+spring.datasource.driver-class-name =com.mysql.jdbc.Driver
+You are all set and can run the JobFinder file and can use the application and see the result on http://localhost:8080/
+
+Usage
+For better user experience, we prefer to use Postman, to better see the result and make changes. As we defined earlier, our project support crud services. We will define endpoints briefly.
+
+User endpoints:
+1. URL: http://127.0.01:8080/user Create a user - METHOD = POST
+2. URL: http://127.0.01:8080/user/{id} Get a user - METHOD = GET
+3. URL: http://127.0.01:8080/users Get all users - METHOD = GET
+4. URL: http://127.0.01:8080/user/{id} Update a user - METHOD = PUT
+5. URL: http://127.0.01:8080/user/{id} Delete a user - METHOD = DELETE
+Response - List of User objects
+
+Worker endpoints:
+1. URL: http://127.0.01:8080/worker Create a Worker - METHOD = POST
+2. URL: http://127.0.01:8080/worker/{id} Get a Worker - METHOD = GET
+3. URL: http://127.0.01:8080/workers Get all Workers - METHOD = GET
+4. URL: http://127.0.01:8080/worker/{id} Update a Worker - METHOD = PUT
+5. URL: http://127.0.01:8080/worker/{id} Delete a Worker - METHOD = DELETE
+
+Response - List of Workers objects
+Work endpoints:
+1. URL: http://127.0.01:8080/work/{id} Create a Work - METHOD = POST
+2. URL: http://127.0.01:8080/work/user/{user_id} Get Work by UserId - METHOD = GET
+3. URL: http://127.0.01:8080/work/user/{work_id} Get Work by WorkId - METHOD = GET
+4. URL: http://127.0.01:8080/works Get all Works - METHOD = GET
+5. URL: http://127.0.01:8080/work/{work_id} Update a Work by WorkId - METHOD = PUT
+6. URL: http://127.0.01:8080/work/{work_id} Delete a Work by WrokId - METHOD = DELETE
+
+
+Response - List of Work objects
+Bid endpoints:
+
+1. URL: http://127.0.01:8080/bid/{work_id}/{worker_id} Create a Bid by workId and workerId - METHOD = POST
+
+Response - List of Bid objects
+
+
+
+
+
+
+
+
+#Endpoints
+
+User:
+
+[POST]
+127.0.0.1:8080/user
+Body:
