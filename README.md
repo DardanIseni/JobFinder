@@ -32,7 +32,26 @@ User endpoints:
 4. URL: http://127.0.01:8080/user/{id} Update a user - METHOD = PUT
 5. URL: http://127.0.01:8080/user/{id} Delete a user - METHOD = DELETE
 
-Response - List of User objects
+Body example for user POST:
+{
+  "username":"Test",
+  "address":{
+    "city":"test",
+    "country":"test"
+  }
+}
+
+Body example for user GET:
+{
+  "id":1
+  "username":"Test",
+  "address":{
+    "id":1
+    "city":"test",
+    "country":"test"
+  }
+  "works":[]
+}
 
 Worker endpoints:
 1. URL: http://127.0.01:8080/worker Create a Worker - METHOD = POST
@@ -41,7 +60,27 @@ Worker endpoints:
 4. URL: http://127.0.01:8080/worker/{id} Update a Worker - METHOD = PUT
 5. URL: http://127.0.01:8080/worker/{id} Delete a Worker - METHOD = DELETE
 
-Response - List of Workers objects
+Body example for worker POST:
+{
+  "username":"Test",
+  "address":{
+    "city":"test",
+    "country":"test"
+  }
+}
+
+Body example for worker GET:
+{
+  "id":1
+  "username":"Test",
+  "address":{
+    "id":1
+    "city":"test",
+    "country":"test"
+  }
+  "works":[]
+}
+
 Work endpoints:
 1. URL: http://127.0.01:8080/work/{id} Create a Work - METHOD = POST
 2. URL: http://127.0.01:8080/work/user/{user_id} Get Work by UserId - METHOD = GET
@@ -50,13 +89,38 @@ Work endpoints:
 5. URL: http://127.0.01:8080/work/{work_id} Update a Work by WorkId - METHOD = PUT
 6. URL: http://127.0.01:8080/work/{work_id} Delete a Work by WrokId - METHOD = DELETE
 
+Body example for work GET:
+
+{
+        "id": 84,
+        "title": "do dishes",
+        "description": "shka me fol beweeeee",
+        "is_available": true,
+        "address": {
+            "id": 1,
+            "city": "test",
+            "country": "test"
+        },
+        "bid": [
+            {
+                "id": 1,
+                "price": 847.0,
+                "created_at": null
+            }
+            {
+                "id": 1,
+                "price": 847.0,
+                "created_at": null
+            }
+        ]
+    },
+
 
 Response - List of Work objects
 Bid endpoints:
 
 1. URL: http://127.0.01:8080/bid/{work_id}/{worker_id} Create a Bid by workId and workerId - METHOD = POST
 
-Response - List of Bid objects
 
 
 
