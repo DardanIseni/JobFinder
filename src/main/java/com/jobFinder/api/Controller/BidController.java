@@ -38,4 +38,9 @@ public class BidController {
         return bidService.acceptBid(workId,bidId);
     }
 
+    @DeleteMapping("bid/{id}")
+    public void deleteBid(@PathVariable int id) {
+        bidRepository.deleteById(id);
+    }
+
 }

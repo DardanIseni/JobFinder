@@ -33,9 +33,9 @@ public class Work {
     @JsonManagedReference
     private List<Bid> bid;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
     @JsonBackReference
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToOne

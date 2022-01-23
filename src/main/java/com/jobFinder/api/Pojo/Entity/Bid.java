@@ -20,9 +20,9 @@ public class Bid {
     @Column(name = "created_at")
     private Date created_at;
 
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "work_id")
-    @JsonBackReference
     private Work work;
 
     @ManyToOne
@@ -38,6 +38,8 @@ public class Bid {
         this.work = work;
         this.worker = worker;
     }
+
+    public int getWorkID() { return work.getId();}
 
     public int getId() {
         return id;
