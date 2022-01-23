@@ -10,6 +10,8 @@ import com.jobFinder.api.Repository.WorkerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class DefaultBidService implements BidService{
 
@@ -28,6 +30,16 @@ public class DefaultBidService implements BidService{
         Work work = workRepository.findById(work_id);
         Bid bid = new Bid(bidInput.getPrice(),work,worker);
         return bidRepository.save(bid);
+
+    }
+
+    @Override
+    public Bid acceptBid(int workId, int bidId) {
+        Work work = workRepository.findById(workId);
+        Bid bid = bidRepository.findById(bidId);
+        bid.setWork(work);
+        return bidRepository.save(bid);
+
 
     }
 }

@@ -7,4 +7,5 @@ import com.jobFinder.api.Pojo.Input.BidInput;
 
 public interface BidService {
     Bid createBid(BidInput bidInput,int worker_id, int work_id);
+    Bid acceptBid(int workId,int bidId);
 }
