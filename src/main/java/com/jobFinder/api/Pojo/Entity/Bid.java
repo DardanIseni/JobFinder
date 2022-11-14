@@ -21,11 +21,11 @@ public class Bid {
     private Date created_at;
 
     @JsonBackReference
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "work_id")
     private Work work;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "worker_id")
     @JsonBackReference
     private Worker worker;

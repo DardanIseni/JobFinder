@@ -25,7 +25,7 @@ public class Work {
     @Column (name = "available")
     private boolean is_available = true;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id")
     private Address address;
 

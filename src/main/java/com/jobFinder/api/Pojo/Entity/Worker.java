@@ -17,7 +17,7 @@ public class Worker {
     @Column(name = "username")
     private String username;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id")
     private Address address = new Address();
 
