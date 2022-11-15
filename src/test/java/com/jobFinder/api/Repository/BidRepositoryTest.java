@@ -1,6 +1,5 @@
 package com.jobFinder.api.Repository;
 
-import com.jobFinder.api.JobFinderApiApplication;
 import com.jobFinder.api.Pojo.Entity.Bid;
 import com.jobFinder.api.Pojo.Entity.Work;
 import com.jobFinder.api.Pojo.Entity.Worker;

@@ -29,12 +29,12 @@ public class Work {
     @JoinColumn(name = "address_id")
     private Address address;
 
-    @OneToMany(mappedBy = "work")
+    @OneToMany(mappedBy = "work",cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<Bid> bid;
 
     @JsonBackReference
-    @ManyToOne(fetch=FetchType.LAZY)
+    @ManyToOne(fetch=FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
     private User user;
 
